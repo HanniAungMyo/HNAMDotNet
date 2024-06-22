@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HNAMDotNet.ConsoleApp", "HNAMDotNet.ConsoleApp\HNAMDotNet.ConsoleApp.csproj", "{923D845C-B200-447B-9060-ED932D8D94ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HNAMDotNet.WindowForm", "HNAMDotNet.WindowForm\HNAMDotNet.WindowForm.csproj", "{94623109-C1D2-4C56-8366-2E2B38E4AF00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{923D845C-B200-447B-9060-ED932D8D94ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{923D845C-B200-447B-9060-ED932D8D94ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{923D845C-B200-447B-9060-ED932D8D94ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94623109-C1D2-4C56-8366-2E2B38E4AF00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94623109-C1D2-4C56-8366-2E2B38E4AF00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94623109-C1D2-4C56-8366-2E2B38E4AF00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94623109-C1D2-4C56-8366-2E2B38E4AF00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
