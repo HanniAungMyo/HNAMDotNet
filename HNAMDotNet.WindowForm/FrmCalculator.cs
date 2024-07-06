@@ -91,9 +91,18 @@ namespace HNAMDotNet.WindowForm
 
         }
 
+        private void btnMinus_Click_1(object sender, EventArgs e)
+        {
+            string Result = txtData.Text;
+            string minus = btnMinus.Text;
+            txtData.Text = Result + minus;
+            operation = "-";
+        }
+
         private void btnResult_Click(object sender, EventArgs e)
         {
             int Result = 0;
+           
             switch (operation)
             {
                 case "+":
@@ -101,6 +110,36 @@ namespace HNAMDotNet.WindowForm
                     foreach (string str in strNumber)
                     {
                         Result += Convert.ToInt32(str);
+                    }
+                    txtResult.Text = Result.ToString();
+                    break;
+                case "-":
+                    string[] Number = txtData.Text.Split('-');
+                    foreach (string str in Number)
+                    {
+                     
+                      Result = Convert.ToInt32(str)-Result;
+
+                    }
+                    txtResult.Text = Result.ToString();
+                    break;
+
+                case "x":
+                    string[] multiNumber = txtData.Text.Split('x');
+                    Result = 1;
+                    foreach (string str in multiNumber)
+                    {
+                        Result *= Convert.ToInt32(str);
+                    }
+                    txtResult.Text = Result.ToString();
+                    break;
+
+                case "/":
+                    string[] dividedNumber = txtData.Text.Split('/');
+                    
+                    foreach (string str in dividedNumber)
+                    {
+                        Result /= Convert.ToInt32(str);
                     }
                     txtResult.Text = Result.ToString();
                     break;
@@ -117,8 +156,12 @@ namespace HNAMDotNet.WindowForm
 
         private void btnDivided_Click(object sender, EventArgs e)
         {
-
+            string Result = txtData.Text;
+            string divided = btnDivided.Text;
+            txtData.Text = Result + divided;
+            operation = "/";
         }
+
 
         private void btnDel_Click(object sender, EventArgs e)
         {
@@ -128,6 +171,15 @@ namespace HNAMDotNet.WindowForm
                 string Result = txtData.Text.Substring(0, txtData.Text.Length - 1);
                 txtData.Text = Result;
             }
+        }
+       
+
+        private void btnMultiply_Click(object sender, EventArgs e)
+        {
+            string Result = txtData.Text;
+            string multiply = btnMultiply.Text;
+            txtData.Text = Result + multiply;
+            operation = "x";
         }
     }
 }

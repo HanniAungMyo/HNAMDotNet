@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HNAMDotNet.ConsoleApp", "HN
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HNAMDotNet.WindowForm", "HNAMDotNet.WindowForm\HNAMDotNet.WindowForm.csproj", "{94623109-C1D2-4C56-8366-2E2B38E4AF00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HNAMDotNet.HospitalManagementSystem", "HNAMDotNet.HospitalManagementSystem\HNAMDotNet.HospitalManagementSystem.csproj", "{90C8ABAB-287B-40D7-BAA0-AEE1752862C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{94623109-C1D2-4C56-8366-2E2B38E4AF00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94623109-C1D2-4C56-8366-2E2B38E4AF00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94623109-C1D2-4C56-8366-2E2B38E4AF00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90C8ABAB-287B-40D7-BAA0-AEE1752862C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90C8ABAB-287B-40D7-BAA0-AEE1752862C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90C8ABAB-287B-40D7-BAA0-AEE1752862C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90C8ABAB-287B-40D7-BAA0-AEE1752862C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
