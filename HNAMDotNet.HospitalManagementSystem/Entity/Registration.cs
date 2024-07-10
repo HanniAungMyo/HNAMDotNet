@@ -8,9 +8,11 @@ using System.Xml.Linq;
 
 namespace HNAMDotNet.HospitalManagementSystem.Entity
 {
-    public class Regitration
+    public class Registration
     {
+        public string RowNo { get; set; }
         public int Id { get; set; }
+        public string FullName { get; set; }
         public string Name { get; set; }
         public DateTime Dob { get; set; }
         public string PhoneNo { get; set; }
@@ -18,12 +20,15 @@ namespace HNAMDotNet.HospitalManagementSystem.Entity
         public string Gender { get; set; }
         public int MaritalStatusId { get; set; }
         public int NameTypeId { get; set; }
+        public string MaritalStatusName {  get; set; }
     }
 
-    public class ResRegitration
+    public class ResRegistration
     {
         public MessageEntity messageEntity { get; set; }
-        public List<Regitration> lstRegitration { get; set; }
+        public List<Registration> lstRegitration { get; set; }
+        public List<MaritalStatus> lstMaritalStatus { get; set; }
+        public List<NameType> lstNameType { get; set; }
     }
 
 }

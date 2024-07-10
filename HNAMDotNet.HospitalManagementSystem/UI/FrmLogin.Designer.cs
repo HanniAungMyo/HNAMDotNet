@@ -68,10 +68,10 @@
             guna2PictureBox1.Image = Properties.Resources.undraw_medicine_b1ol;
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.InitialImage = null;
-            guna2PictureBox1.Location = new Point(-26, -2);
+            guna2PictureBox1.Location = new Point(1, -2);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2PictureBox1.Size = new Size(1056, 582);
+            guna2PictureBox1.Size = new Size(1038, 582);
             guna2PictureBox1.TabIndex = 0;
             guna2PictureBox1.TabStop = false;
             // 

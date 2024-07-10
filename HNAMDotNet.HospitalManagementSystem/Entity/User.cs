@@ -17,6 +17,6 @@ namespace HNAMDotNet.HospitalManagementSystem.Entity
     public class ResUser
     {
         public MessageEntity messageEntity { get; set; }    
-        public List<User> lstUser {  get; set; }
+        public User User {  get; set; }
     }
 }

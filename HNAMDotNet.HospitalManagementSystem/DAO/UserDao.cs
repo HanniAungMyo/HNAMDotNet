@@ -7,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace HNAMDotNet.HospitalManagementSystem.DAO
 {
@@ -22,7 +23,7 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
             MessageEntity _messageEntity = new MessageEntity();
             try
             {
-                List<User> lst = new List<User>();
+                User User = new User();
                 sqlConnection = DbConnector.Connect();
                 if (sqlConnection == null) return null;
 
@@ -36,12 +37,9 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
 
                 if (ds != null && ds.Tables[0].Rows.Count > 0)
                 {
-                    lst.Add(new User()
-                    {
-                        Id = Convert.ToInt32(ds.Tables[0].Rows[0]["Id"]),
-                        UserName = ds.Tables[0].Rows[0]["UserName"].ToString(),
-                        Password = ds.Tables[0].Rows[0]["Password"].ToString()
-                    });
+                    User.Id = Convert.ToInt32(ds.Tables[0].Rows[0]["Id"]);
+                    User.UserName = ds.Tables[0].Rows[0]["UserName"].ToString();
+                    User.Password = ds.Tables[0].Rows[0]["Password"].ToString();
 
                     _messageEntity.RespCode = CommonResponseMessage.ResSuccessCode;
                     _messageEntity.RespDesc = "Login Successfully";
@@ -57,7 +55,7 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                 return new ResUser()
                 {
                     messageEntity = _messageEntity,
-                    lstUser = lst
+                    User = User
                 };
 
             }

@@ -1,6 +1,7 @@
 using HNAMDotNet.HospitalManagementSystem.Common;
 using HNAMDotNet.HospitalManagementSystem.DAO;
 using HNAMDotNet.HospitalManagementSystem.Entity;
+using HNAMDotNet.HospitalManagementSystem.UI;
 
 namespace HNAMDotNet.HospitalManagementSystem
 {
@@ -52,7 +53,10 @@ namespace HNAMDotNet.HospitalManagementSystem
                         if (resUser.messageEntity.RespType == CommonResponseMessage.ResSuccessType)
                         {
                             MessageBox.Show(resUser.messageEntity.RespDesc);
-                        }
+                            FrmMain frm=new FrmMain();
+                            frm.Show();
+                            this.Hide();
+                        } 
                         else
                         {
                             MessageBox.Show(resUser.messageEntity.RespDesc);
