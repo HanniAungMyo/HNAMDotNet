@@ -15,6 +15,9 @@ namespace HNAMDotNet.HospitalManagementSystem.UI.Entry
 {
     public partial class FrmRegistration : Form
     {
+        bool IsEdit = false;
+        int RegistrationId = 0;
+        MessageEntity msgEntity = new MessageEntity();
         public FrmRegistration()
         {
             InitializeComponent();
@@ -91,16 +94,34 @@ namespace HNAMDotNet.HospitalManagementSystem.UI.Entry
                     //{
                     //    gender = "Female";
                     //}
-                    MessageEntity msgEntity = new RegistrationDao().Save(new Registration()
+                    if (IsEdit)
                     {
-                        NameTypeId = Convert.ToInt32(cboNameType.SelectedValue),
-                        Name = txtName.Text,
-                        Dob = dtpDob.Value,
-                        PhoneNo = txtPhNo.Text,
-                        FatherName = txtFatherName.Text,
-                        Gender = rdoMale.Checked ? "Male" : "Female",
-                        MaritalStatusId = Convert.ToInt32(cboMaritalStatus.SelectedValue)
-                    });
+                        msgEntity = new RegistrationDao().Update(new RegistrationEntity()
+                        {
+                            Id = RegistrationId,
+                            NameTypeId = Convert.ToInt32(cboNameType.SelectedValue),
+                            Name = txtName.Text,
+                            Dob = dtpDob.Value,
+                            PhoneNo = txtPhNo.Text,
+                            FatherName = txtFatherName.Text,
+                            Gender = rdoMale.Checked ? "Male" : "Female",
+                            MaritalStatusId = Convert.ToInt32(cboMaritalStatus.SelectedValue)
+                        });
+                    }
+                    else
+                    {
+                        msgEntity = new RegistrationDao().Save(new RegistrationEntity()
+                        {
+                            NameTypeId = Convert.ToInt32(cboNameType.SelectedValue),
+                            Name = txtName.Text,
+                            Dob = dtpDob.Value,
+                            PhoneNo = txtPhNo.Text,
+                            FatherName = txtFatherName.Text,
+                            Gender = rdoMale.Checked ? "Male" : "Female",
+                            MaritalStatusId = Convert.ToInt32(cboMaritalStatus.SelectedValue)
+                        });
+                    }
+
                     if (msgEntity.RespType == CommonResponseMessage.ResSuccessType)
                     {
                         MessageBox.Show(msgEntity.RespDesc);
@@ -166,28 +187,74 @@ namespace HNAMDotNet.HospitalManagementSystem.UI.Entry
             rdoFemale.Checked = false;
             rdoMale.Checked = true;
             cboMaritalStatus.SelectedIndex = 0;
+            IsEdit = false;
+            btnSave.Text = "Save";
         }
 
         private void dgvRegistarion_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow dgvRow=dgvRegistarion.SelectedRows[0];
-            cboNameType.SelectedValue =Convert.ToInt32(dgvRow.Cells["colNameTypeId"].Value);
-            txtName.Text= dgvRow.Cells["colName"].Value.ToString();
-            dtpDob.Value=Convert.ToDateTime(dgvRow.Cells["colDob"].Value.ToString()) ;
-            txtPhNo.Text = dgvRow.Cells["colPhone"].Value.ToString();
-            txtFatherName.Text = dgvRow.Cells["colFatherName"].Value.ToString();
-            if (dgvRow.Cells["colGender"].Value.ToString() == "Male")
+            try
             {
-                rdoMale.Checked = true;
-                rdoFemale.Checked = false;
+                DataGridViewRow dgvRow = dgvRegistarion.SelectedRows[0];
+                cboNameType.SelectedValue = Convert.ToInt32(dgvRow.Cells["colNameTypeId"].Value);
+                txtName.Text = dgvRow.Cells["colName"].Value.ToString();
+                dtpDob.Value = Convert.ToDateTime(dgvRow.Cells["colDob"].Value.ToString());
+                txtPhNo.Text = dgvRow.Cells["colPhone"].Value.ToString();
+                txtFatherName.Text = dgvRow.Cells["colFatherName"].Value.ToString();
+                if (dgvRow.Cells["colGender"].Value.ToString() == "Male")
+                {
+                    rdoMale.Checked = true;
+                    rdoFemale.Checked = false;
+                }
+                else
+                {
+                    rdoMale.Checked = false;
+                    rdoFemale.Checked = true;
+                }
+                cboMaritalStatus.SelectedValue = Convert.ToInt32(dgvRow.Cells["colMaritalStatusId"].Value);
+                btnSave.Text = "Update";
+                RegistrationId = Convert.ToInt32(dgvRow.Cells["colRegistrationId"].Value);
+                IsEdit = true;
             }
-            else
+            catch (Exception ex)
             {
-                rdoMale.Checked = false;
-                rdoFemale.Checked = true;
+                MessageBox.Show(ex.Message);
             }
-            cboMaritalStatus.SelectedValue = Convert.ToInt32(dgvRow.Cells["colMaritalStatusId"].Value);
-            btnSave.Text = "Update";
+        }
+
+        private void dgvRegistarion_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvRegistarion.Rows[e.RowIndex].Cells["colDelete"].ColumnIndex == e.ColumnIndex)
+                {
+                    var confirmResult = MessageBox.Show("Are you sure to delete this item ??",
+                                      "Confirm Delete!!",
+                                      MessageBoxButtons.YesNo);
+                    if (confirmResult == DialogResult.Yes)
+                    {
+                        RegistrationId = Convert.ToInt32(dgvRegistarion.Rows[e.RowIndex].Cells["colRegistrationId"].Value);
+                        msgEntity = new RegistrationDao().Delete(new RegistrationEntity()
+                        {
+                            Id = RegistrationId
+                        });
+
+                        if (msgEntity.RespType == CommonResponseMessage.ResSuccessType)
+                        {
+                            MessageBox.Show(msgEntity.RespDesc);
+                            BindDataGridView();
+                        }
+                        else
+                        {
+                            MessageBox.Show(msgEntity.RespDesc);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
     }

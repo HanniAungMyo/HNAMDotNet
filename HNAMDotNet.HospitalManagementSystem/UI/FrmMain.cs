@@ -1,4 +1,5 @@
-﻿using HNAMDotNet.HospitalManagementSystem.UI.Entry;
+﻿using HNAMDotNet.HospitalManagementSystem.UI.Configuration;
+using HNAMDotNet.HospitalManagementSystem.UI.Entry;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,12 @@ namespace HNAMDotNet.HospitalManagementSystem.UI
         {
             FrmRegistration frmRegistration = new FrmRegistration();
             frmRegistration.Show();
+        }
+
+        private void btnNameType_Click(object sender, EventArgs e)
+        {
+            FrmNameType frm = new FrmNameType();
+            frm.Show();
         }
     }
 }

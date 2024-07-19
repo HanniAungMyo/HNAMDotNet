@@ -43,8 +43,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pnlLeft = new Panel();
             lblMarital = new Label();
             lblGender = new Label();
@@ -63,7 +63,7 @@
             txtName = new Guna.UI2.WinForms.Guna2TextBox();
             pnlRight = new Panel();
             dgvRegistarion = new Guna.UI2.WinForms.Guna2DataGridView();
-            colId = new DataGridViewTextBoxColumn();
+            colRegistrationId = new DataGridViewTextBoxColumn();
             colNameTypeId = new DataGridViewTextBoxColumn();
             colMaritalStatusId = new DataGridViewTextBoxColumn();
             colNo = new DataGridViewTextBoxColumn();
@@ -74,6 +74,7 @@
             colFatherName = new DataGridViewTextBoxColumn();
             colGender = new DataGridViewTextBoxColumn();
             colMaritalStatus = new DataGridViewTextBoxColumn();
+            colDelete = new DataGridViewButtonColumn();
             pnlLeft.SuspendLayout();
             pnlRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvRegistarion).BeginInit();
@@ -337,19 +338,17 @@
             // 
             dgvRegistarion.AllowUserToAddRows = false;
             dgvRegistarion.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = Color.White;
-            dgvRegistarion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvRegistarion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvRegistarion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvRegistarion.ColumnHeadersHeight = 42;
             dgvRegistarion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvRegistarion.Columns.AddRange(new DataGridViewColumn[] { colId, colNameTypeId, colMaritalStatusId, colNo, colFullName, colName, colDob, colPhone, colFatherName, colGender, colMaritalStatus });
+            dgvRegistarion.Columns.AddRange(new DataGridViewColumn[] { colRegistrationId, colNameTypeId, colMaritalStatusId, colNo, colFullName, colName, colDob, colPhone, colFatherName, colGender, colMaritalStatus, colDelete });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -389,16 +388,17 @@
             dgvRegistarion.ThemeStyle.RowsStyle.Height = 29;
             dgvRegistarion.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvRegistarion.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvRegistarion.CellContentClick += dgvRegistarion_CellContentClick;
             dgvRegistarion.CellDoubleClick += dgvRegistarion_CellDoubleClick;
             // 
-            // colId
+            // colRegistrationId
             // 
-            colId.DataPropertyName = "Id";
-            colId.HeaderText = "RegistrationId";
-            colId.MinimumWidth = 6;
-            colId.Name = "colId";
-            colId.ReadOnly = true;
-            colId.Visible = false;
+            colRegistrationId.DataPropertyName = "Id";
+            colRegistrationId.HeaderText = "RegistrationId";
+            colRegistrationId.MinimumWidth = 6;
+            colRegistrationId.Name = "colRegistrationId";
+            colRegistrationId.ReadOnly = true;
+            colRegistrationId.Visible = false;
             // 
             // colNameTypeId
             // 
@@ -490,6 +490,21 @@
             colMaritalStatus.Name = "colMaritalStatus";
             colMaritalStatus.ReadOnly = true;
             // 
+            // colDelete
+            // 
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.Red;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Red;
+            colDelete.DefaultCellStyle = dataGridViewCellStyle2;
+            colDelete.HeaderText = "";
+            colDelete.MinimumWidth = 6;
+            colDelete.Name = "colDelete";
+            colDelete.ReadOnly = true;
+            colDelete.Resizable = DataGridViewTriState.True;
+            colDelete.SortMode = DataGridViewColumnSortMode.Automatic;
+            colDelete.Text = "Delete";
+            colDelete.UseColumnTextForButtonValue = true;
+            // 
             // FrmRegistration
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -527,7 +542,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtName;
         private Panel pnlRight;
         private Guna.UI2.WinForms.Guna2DataGridView dgvRegistarion;
-        private DataGridViewTextBoxColumn colId;
+        private DataGridViewTextBoxColumn colRegistrationId;
         private DataGridViewTextBoxColumn colNameTypeId;
         private DataGridViewTextBoxColumn colMaritalStatusId;
         private DataGridViewTextBoxColumn colNo;
@@ -538,5 +553,6 @@
         private DataGridViewTextBoxColumn colFatherName;
         private DataGridViewTextBoxColumn colGender;
         private DataGridViewTextBoxColumn colMaritalStatus;
+        private DataGridViewButtonColumn colDelete;
     }
 }

@@ -35,12 +35,12 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                 DataTable dtMarital = new DataTable();
                 dtMarital = ds.Tables[1];
 
-                List<NameType> lstNameType = new List<NameType>();
+                List<NameTypeEntity> lstNameType = new List<NameTypeEntity>();
                 if (dtNameType != null && dtNameType.Rows.Count > 0)
                 {
                     foreach (DataRow dr in dtNameType.Rows)
                     {
-                        lstNameType.Add(new NameType()
+                        lstNameType.Add(new NameTypeEntity()
                         {
                             Id = Convert.ToInt32(dr["Id"]),
                             Type = dr["Type"].ToString(),
@@ -80,7 +80,7 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
             }
         }
 
-        public MessageEntity Save(Registration reg)
+        public MessageEntity Save(RegistrationEntity reg)
         {
             MessageEntity _messageEntity = new MessageEntity();
             try
@@ -125,10 +125,10 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                 dataAdapter = new SqlDataAdapter(cmd);
                 dataAdapter.Fill(dt);
 
-                List<Registration> lst = new List<Registration>();
+                List<RegistrationEntity> lst = new List<RegistrationEntity>();
                 foreach (DataRow dr in dt.Rows) 
                 {
-                    lst.Add(new Registration()
+                    lst.Add(new RegistrationEntity()
                     {
                         RowNo = dr["RowNo"].ToString(),
                         Id = Convert.ToInt32(dr["Id"]),
@@ -162,5 +162,66 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                 };
             }
         }
+
+        public MessageEntity Update(RegistrationEntity reg)
+        {
+            MessageEntity _messageEntity = new MessageEntity();
+            try
+            {
+                con = DbConnector.Connect();
+                if (con == null) return null;
+                cmd = new SqlCommand(ProcedureConstants.SP_UpdateRegistration, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Id", reg.Id);
+                cmd.Parameters.AddWithValue("@Name", reg.Name);
+                cmd.Parameters.AddWithValue("@Dob", reg.Dob);
+                cmd.Parameters.AddWithValue("@PhoneNo", reg.PhoneNo);
+                cmd.Parameters.AddWithValue("@FatherName", reg.FatherName);
+                cmd.Parameters.AddWithValue("@Gender", reg.Gender);
+                cmd.Parameters.AddWithValue("@MaritalStatusId", reg.MaritalStatusId);
+                cmd.Parameters.AddWithValue("@NameTypeId", reg.NameTypeId);
+                dataAdapter = new SqlDataAdapter(cmd);
+                cmd.ExecuteNonQuery();
+                _messageEntity.RespCode = CommonResponseMessage.ResSuccessCode;
+                _messageEntity.RespDesc = "Registration Update Successfully";
+                _messageEntity.RespType = CommonResponseMessage.ResSuccessType;
+                return _messageEntity;
+            }
+            catch (Exception ex)
+            {
+                _messageEntity.RespCode = CommonResponseMessage.ResErrorCode;
+                _messageEntity.RespDesc = ex.Message;
+                _messageEntity.RespType = CommonResponseMessage.ResErrorType;
+                return _messageEntity;
+            }
+        }
+
+        public MessageEntity Delete(RegistrationEntity reg)
+        {
+            MessageEntity _messageEntity = new MessageEntity();
+            try
+            {
+                con = DbConnector.Connect();
+                if (con == null) return null;
+                cmd = new SqlCommand(ProcedureConstants.SP_DeleteRegistration, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Id", reg.Id);
+                dataAdapter = new SqlDataAdapter(cmd);
+                cmd.ExecuteNonQuery();
+                _messageEntity.RespCode = CommonResponseMessage.ResSuccessCode;
+                _messageEntity.RespDesc = "Registration Delete Successfully";
+                _messageEntity.RespType = CommonResponseMessage.ResSuccessType;
+                return _messageEntity;
+            }
+            catch (Exception ex)
+            {
+                _messageEntity.RespCode = CommonResponseMessage.ResErrorCode;
+                _messageEntity.RespDesc = ex.Message;
+                _messageEntity.RespType = CommonResponseMessage.ResErrorType;
+                return _messageEntity;
+            }
+        }
+
+        
     }
 }

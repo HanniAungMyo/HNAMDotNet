@@ -34,30 +34,30 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             pnlData = new Guna.UI2.WinForms.Guna2Panel();
             pnlLeft = new Guna.UI2.WinForms.Guna2Panel();
+            btnSpeciality = new Guna.UI2.WinForms.Guna2Button();
+            btnNameType = new Guna.UI2.WinForms.Guna2Button();
+            btnMarital = new Guna.UI2.WinForms.Guna2Button();
+            btnDoctor = new Guna.UI2.WinForms.Guna2Button();
+            btnBooking = new Guna.UI2.WinForms.Guna2Button();
             btnUser = new Guna.UI2.WinForms.Guna2Button();
             btnRegistration = new Guna.UI2.WinForms.Guna2Button();
-            btnBooking = new Guna.UI2.WinForms.Guna2Button();
-            btnDoctor = new Guna.UI2.WinForms.Guna2Button();
-            btnMarital = new Guna.UI2.WinForms.Guna2Button();
-            btnNameType = new Guna.UI2.WinForms.Guna2Button();
-            btnSpeciality = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1.SuspendLayout();
             pnlLeft.SuspendLayout();
             SuspendLayout();
@@ -101,6 +101,92 @@
             pnlLeft.Size = new Size(206, 607);
             pnlLeft.TabIndex = 0;
             // 
+            // btnSpeciality
+            // 
+            btnSpeciality.CustomizableEdges = customizableEdges3;
+            btnSpeciality.DisabledState.BorderColor = Color.DarkGray;
+            btnSpeciality.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSpeciality.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSpeciality.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSpeciality.FillColor = Color.FromArgb(22, 123, 71);
+            btnSpeciality.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSpeciality.ForeColor = Color.White;
+            btnSpeciality.Location = new Point(23, 536);
+            btnSpeciality.Name = "btnSpeciality";
+            btnSpeciality.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnSpeciality.Size = new Size(153, 56);
+            btnSpeciality.TabIndex = 6;
+            btnSpeciality.Text = "Speciality";
+            // 
+            // btnNameType
+            // 
+            btnNameType.CustomizableEdges = customizableEdges5;
+            btnNameType.DisabledState.BorderColor = Color.DarkGray;
+            btnNameType.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnNameType.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnNameType.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnNameType.FillColor = Color.FromArgb(22, 123, 71);
+            btnNameType.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnNameType.ForeColor = Color.White;
+            btnNameType.Location = new Point(23, 438);
+            btnNameType.Name = "btnNameType";
+            btnNameType.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnNameType.Size = new Size(153, 56);
+            btnNameType.TabIndex = 5;
+            btnNameType.Text = "NameType";
+            btnNameType.Click += btnNameType_Click;
+            // 
+            // btnMarital
+            // 
+            btnMarital.CustomizableEdges = customizableEdges7;
+            btnMarital.DisabledState.BorderColor = Color.DarkGray;
+            btnMarital.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnMarital.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnMarital.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnMarital.FillColor = Color.FromArgb(22, 123, 71);
+            btnMarital.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnMarital.ForeColor = Color.White;
+            btnMarital.Location = new Point(23, 352);
+            btnMarital.Name = "btnMarital";
+            btnMarital.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnMarital.Size = new Size(153, 56);
+            btnMarital.TabIndex = 4;
+            btnMarital.Text = "MaritalStatus";
+            // 
+            // btnDoctor
+            // 
+            btnDoctor.CustomizableEdges = customizableEdges9;
+            btnDoctor.DisabledState.BorderColor = Color.DarkGray;
+            btnDoctor.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnDoctor.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnDoctor.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnDoctor.FillColor = Color.FromArgb(22, 123, 71);
+            btnDoctor.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDoctor.ForeColor = Color.White;
+            btnDoctor.Location = new Point(23, 265);
+            btnDoctor.Name = "btnDoctor";
+            btnDoctor.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnDoctor.Size = new Size(153, 56);
+            btnDoctor.TabIndex = 3;
+            btnDoctor.Text = "Doctors";
+            // 
+            // btnBooking
+            // 
+            btnBooking.CustomizableEdges = customizableEdges11;
+            btnBooking.DisabledState.BorderColor = Color.DarkGray;
+            btnBooking.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnBooking.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnBooking.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnBooking.FillColor = Color.FromArgb(22, 123, 71);
+            btnBooking.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBooking.ForeColor = Color.White;
+            btnBooking.Location = new Point(23, 189);
+            btnBooking.Name = "btnBooking";
+            btnBooking.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnBooking.Size = new Size(153, 56);
+            btnBooking.TabIndex = 2;
+            btnBooking.Text = "Booking";
+            // 
             // btnUser
             // 
             btnUser.CustomizableEdges = customizableEdges13;
@@ -135,91 +221,6 @@
             btnRegistration.TabIndex = 0;
             btnRegistration.Text = "Registration";
             btnRegistration.Click += btnRegistration_Click;
-            // 
-            // btnBooking
-            // 
-            btnBooking.CustomizableEdges = customizableEdges11;
-            btnBooking.DisabledState.BorderColor = Color.DarkGray;
-            btnBooking.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnBooking.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnBooking.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnBooking.FillColor = Color.FromArgb(22, 123, 71);
-            btnBooking.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnBooking.ForeColor = Color.White;
-            btnBooking.Location = new Point(23, 189);
-            btnBooking.Name = "btnBooking";
-            btnBooking.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnBooking.Size = new Size(153, 56);
-            btnBooking.TabIndex = 2;
-            btnBooking.Text = "Booking";
-            // 
-            // btnDoctor
-            // 
-            btnDoctor.CustomizableEdges = customizableEdges9;
-            btnDoctor.DisabledState.BorderColor = Color.DarkGray;
-            btnDoctor.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnDoctor.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnDoctor.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnDoctor.FillColor = Color.FromArgb(22, 123, 71);
-            btnDoctor.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnDoctor.ForeColor = Color.White;
-            btnDoctor.Location = new Point(23, 265);
-            btnDoctor.Name = "btnDoctor";
-            btnDoctor.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnDoctor.Size = new Size(153, 56);
-            btnDoctor.TabIndex = 3;
-            btnDoctor.Text = "Doctors";
-            // 
-            // btnMarital
-            // 
-            btnMarital.CustomizableEdges = customizableEdges7;
-            btnMarital.DisabledState.BorderColor = Color.DarkGray;
-            btnMarital.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnMarital.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnMarital.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnMarital.FillColor = Color.FromArgb(22, 123, 71);
-            btnMarital.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnMarital.ForeColor = Color.White;
-            btnMarital.Location = new Point(23, 352);
-            btnMarital.Name = "btnMarital";
-            btnMarital.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnMarital.Size = new Size(153, 56);
-            btnMarital.TabIndex = 4;
-            btnMarital.Text = "MaritalStatus";
-            // 
-            // btnNameType
-            // 
-            btnNameType.CustomizableEdges = customizableEdges5;
-            btnNameType.DisabledState.BorderColor = Color.DarkGray;
-            btnNameType.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnNameType.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnNameType.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnNameType.FillColor = Color.FromArgb(22, 123, 71);
-            btnNameType.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnNameType.ForeColor = Color.White;
-            btnNameType.Location = new Point(23, 438);
-            btnNameType.Name = "btnNameType";
-            btnNameType.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnNameType.Size = new Size(153, 56);
-            btnNameType.TabIndex = 5;
-            btnNameType.Text = "NameType";
-            // 
-            // btnSpeciality
-            // 
-            btnSpeciality.CustomizableEdges = customizableEdges3;
-            btnSpeciality.DisabledState.BorderColor = Color.DarkGray;
-            btnSpeciality.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSpeciality.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSpeciality.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSpeciality.FillColor = Color.FromArgb(22, 123, 71);
-            btnSpeciality.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnSpeciality.ForeColor = Color.White;
-            btnSpeciality.Location = new Point(23, 536);
-            btnSpeciality.Name = "btnSpeciality";
-            btnSpeciality.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSpeciality.Size = new Size(153, 56);
-            btnSpeciality.TabIndex = 6;
-            btnSpeciality.Text = "Speciality";
             // 
             // FrmMain
             // 
