@@ -47,8 +47,7 @@ namespace HNAMDotNet.HospitalManagementSystem.UI.Configuration
                         Name = txtSpeciality.Text,
                         Id = _Id
                     });
-                    btnSave.Text = "Save";
-                    txtSpeciality.Clear();
+
                 }
 
                 if (message != null)

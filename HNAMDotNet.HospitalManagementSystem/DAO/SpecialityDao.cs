@@ -119,7 +119,7 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                 cmd.Parameters.AddWithValue("@Id", specialityEntity.Id);
                 cmd.Parameters.AddWithValue("@Name", specialityEntity.Name);
                 cmd.ExecuteNonQuery();
-                message.RespType= CommonResponseMessage.ResSuccessCode;
+                message.RespType= CommonResponseMessage.ResSuccessType;
                 message.RespDesc = "Update Successful";
                 message.RespCode=CommonResponseMessage.ResSuccessCode;
                 return message;
