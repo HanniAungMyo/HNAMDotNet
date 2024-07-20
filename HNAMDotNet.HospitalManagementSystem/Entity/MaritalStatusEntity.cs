@@ -7,15 +7,16 @@ using System.Threading.Tasks;
 
 namespace HNAMDotNet.HospitalManagementSystem.Entity
 {
-    public class MaritalStatus
+    public class MaritalStatusEntity
     {
-       public int Id {  get; set; }
+        public string RowNumber { get; set; }
+        public int Id {  get; set; }
         public string Name { get; set; } 
     }
 
     public class ResMaritalStatus
     {
         public MessageEntity messageEntity { get; set; }
-        public List<MaritalStatus> lstMaritalStatus { get; set; }
+        public List<MaritalStatusEntity> lstMarital { get; set; }
     }
 }

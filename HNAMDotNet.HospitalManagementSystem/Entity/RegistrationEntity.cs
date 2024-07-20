@@ -27,7 +27,7 @@ namespace HNAMDotNet.HospitalManagementSystem.Entity
     {
         public MessageEntity messageEntity { get; set; }
         public List<RegistrationEntity> lstRegitration { get; set; }
-        public List<MaritalStatus> lstMaritalStatus { get; set; }
+        public List<MaritalStatusEntity> lstMaritalStatus { get; set; }
         public List<NameTypeEntity> lstNameType { get; set; }
     }
 

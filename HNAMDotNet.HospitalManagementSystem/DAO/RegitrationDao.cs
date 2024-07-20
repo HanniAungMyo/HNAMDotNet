@@ -47,12 +47,12 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                         });
                     }
                 }
-                List<MaritalStatus> lstMaritalStatus = new List<MaritalStatus>();
+                List<MaritalStatusEntity> lstMaritalStatus = new List<MaritalStatusEntity>();
                 if (dtMarital != null && dtMarital.Rows.Count > 0)
                 {
                     foreach (DataRow dr in dtMarital.Rows)
                     {
-                        lstMaritalStatus.Add(new MaritalStatus()
+                        lstMaritalStatus.Add(new MaritalStatusEntity()
                         {
                             Id = Convert.ToInt32(dr["Id"]),
                             Name = dr["Name"].ToString(),
@@ -222,6 +222,5 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
             }
         }
 
-        
     }
 }

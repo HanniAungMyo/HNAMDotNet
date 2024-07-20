@@ -22,5 +22,9 @@ namespace HNAMDotNet.HospitalManagementSystem.Common
         public static string SP_GetAllSpecialityData = "SP_GetAllSpecialityData";
         public static string SP_DeleteSpeciality = "SP_DeleteSpeciality";
         public static string SP_UpdateSpeciality = "SP_UpdateSpeciality";
+        public static string SP_SaveMaritalStatus = "SP_SaveMaritalStatus";
+        public static string SP_GetAllMaritalStatus = "SP_GetAllMaritalStatus";
+        public static string SP_DeleteMaritalStatus = "SP_DeleteMaritalStatus";
+        public static string SP_UpdateMaritalStatus = "SP_UpdateMaritalStatus";
     }
 }

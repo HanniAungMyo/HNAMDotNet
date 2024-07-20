@@ -16,7 +16,7 @@ namespace HNAMDotNet.HospitalManagementSystem
             // see https://aka.ms/applicationconfiguration.
             DbConnector.ConnectionString = @"Data Source =LAPTOP\SQLSERVER;Initial Catalog =HMS;User ID =sa;Password =sa@123;TrustServerCertificate = true";
             ApplicationConfiguration.Initialize();
-            Application.Run(new FrmSpeciality());
+            Application.Run(new FrmMaritalStatus());
         }
     }
 }
