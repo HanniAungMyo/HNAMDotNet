@@ -14,15 +14,14 @@ using System.Windows.Forms;
 
 namespace HNAMDotNet.HospitalManagementSystem.UI.Configuration
 {
-
     public partial class FrmMaritalStatus : Form
-
     {
+        int _Id = 0;
+
         public FrmMaritalStatus()
         {
             InitializeComponent();
         }
-        int _Id = 0;
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -66,11 +65,6 @@ namespace HNAMDotNet.HospitalManagementSystem.UI.Configuration
                     {
                         MessageBox.Show(message.RespDesc);
                     }
-                    //message = new MaritalStatusDao().Save(new Entity.MaritalStatusEntity()
-                    //{
-                    //    Name = txtMaritalStatus.Text
-                    //});
-
                 }
             }
             catch (Exception ex)
@@ -84,6 +78,7 @@ namespace HNAMDotNet.HospitalManagementSystem.UI.Configuration
         {
             BindDataGridView();
         }
+
         public void BindDataGridView()
         {
             try

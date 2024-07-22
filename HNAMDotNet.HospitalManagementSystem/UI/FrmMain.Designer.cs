@@ -117,6 +117,7 @@
             btnSpeciality.Size = new Size(153, 56);
             btnSpeciality.TabIndex = 6;
             btnSpeciality.Text = "Speciality";
+            btnSpeciality.Click += btnSpeciality_Click;
             // 
             // btnNameType
             // 
@@ -152,6 +153,7 @@
             btnMarital.Size = new Size(153, 56);
             btnMarital.TabIndex = 4;
             btnMarital.Text = "MaritalStatus";
+            btnMarital.Click += btnMarital_Click;
             // 
             // btnDoctor
             // 

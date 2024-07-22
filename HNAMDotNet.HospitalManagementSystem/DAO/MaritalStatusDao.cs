@@ -87,7 +87,7 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
             try
             {
                 conn = DbConnector.Connect();
-                if (conn != null) return null;
+                if (conn == null) return null;
                 cmd = new SqlCommand(ProcedureConstants.SP_DeleteMaritalStatus, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Id", maritalStatusEntity.Id);

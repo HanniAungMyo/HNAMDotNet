@@ -43,8 +43,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             pnlLeft = new Panel();
             lblMarital = new Label();
             lblGender = new Label();
@@ -338,25 +339,27 @@
             // 
             dgvRegistarion.AllowUserToAddRows = false;
             dgvRegistarion.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvRegistarion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dgvRegistarion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvRegistarion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvRegistarion.ColumnHeadersHeight = 42;
             dgvRegistarion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dgvRegistarion.Columns.AddRange(new DataGridViewColumn[] { colRegistrationId, colNameTypeId, colMaritalStatusId, colNo, colFullName, colName, colDob, colPhone, colFatherName, colGender, colMaritalStatus, colDelete });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvRegistarion.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dgvRegistarion.DefaultCellStyle = dataGridViewCellStyle4;
             dgvRegistarion.Dock = DockStyle.Fill;
             dgvRegistarion.GridColor = Color.FromArgb(231, 229, 255);
             dgvRegistarion.Location = new Point(0, 0);
@@ -492,10 +495,10 @@
             // 
             // colDelete
             // 
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.Red;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Red;
-            colDelete.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = Color.Red;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Red;
+            colDelete.DefaultCellStyle = dataGridViewCellStyle3;
             colDelete.HeaderText = "";
             colDelete.MinimumWidth = 6;
             colDelete.Name = "colDelete";

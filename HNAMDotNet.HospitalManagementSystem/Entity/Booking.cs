@@ -9,7 +9,7 @@ namespace HNAMDotNet.HospitalManagementSystem.Entity
 {
     public class Booking
     {
-      public int Id { get; set; }
+        public int Id { get; set; }
         public int RegistrationId { get; set; }
         public int DoctorId { get; set; }
         public DateTime BookingDate { get; set; }

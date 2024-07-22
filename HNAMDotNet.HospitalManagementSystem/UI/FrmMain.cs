@@ -30,5 +30,17 @@ namespace HNAMDotNet.HospitalManagementSystem.UI
             FrmNameType frm = new FrmNameType();
             frm.Show();
         }
+
+        private void btnMarital_Click(object sender, EventArgs e)
+        {
+            FrmMaritalStatus frm = new FrmMaritalStatus();
+            frm.Show();
+        }
+
+        private void btnSpeciality_Click(object sender, EventArgs e)
+        {
+            FrmSpeciality frm=new FrmSpeciality();
+            frm.Show();
+        }
     }
 }
