@@ -423,7 +423,7 @@
             // 
             // colNo
             // 
-            colNo.DataPropertyName = "RowNo";
+            colNo.DataPropertyName = "RowNumber";
             colNo.FillWeight = 74.8663F;
             colNo.HeaderText = "No";
             colNo.MinimumWidth = 6;

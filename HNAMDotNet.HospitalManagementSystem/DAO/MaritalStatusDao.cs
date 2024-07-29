@@ -26,6 +26,8 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                 cmd = new SqlCommand(ProcedureConstants.SP_SaveMaritalStatus, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Name", maritalStatusEntity.Name);
+                cmd.Parameters.AddWithValue("@UserId", CommonFormat.LoginId);
+
                 cmd.ExecuteNonQuery();
                 message.RespCode = CommonResponseMessage.ResSuccessCode;
                 message.RespDesc = "Save Successful";
@@ -116,6 +118,7 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Id", maritalStatusEntity.Id);
                 cmd.Parameters.AddWithValue("@Name", maritalStatusEntity.Name);
+                cmd.Parameters.AddWithValue("@UserId", CommonFormat.LoginId);
                 cmd.ExecuteNonQuery();
                 message.RespCode = CommonResponseMessage.ResSuccessCode;
                 message.RespDesc = "Update Successful";

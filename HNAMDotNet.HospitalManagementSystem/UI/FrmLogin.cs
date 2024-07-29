@@ -42,10 +42,10 @@ namespace HNAMDotNet.HospitalManagementSystem
             {
                 if (CheckRequireFields())
                 {
-                    ResUser resUser = new UserDao().Login(new User()
+                    ResUser resUser = new UserDao().Login(new UserEntity()
                     {
-                        UserName = txtUserName.Text.Trim(),
-                        Password = txtPassword.Text.Trim()
+                        LoginName = txtUserName.Text.Trim(),
+                        Password = txtPassword.Text
                     });
 
                     if (resUser != null)
@@ -53,10 +53,11 @@ namespace HNAMDotNet.HospitalManagementSystem
                         if (resUser.messageEntity.RespType == CommonResponseMessage.ResSuccessType)
                         {
                             MessageBox.Show(resUser.messageEntity.RespDesc);
-                            FrmMain frm=new FrmMain();
+                            CommonFormat.LoginId = resUser.User.Id;
+                            FrmMain frm = new FrmMain();
                             frm.Show();
                             this.Hide();
-                        } 
+                        }
                         else
                         {
                             MessageBox.Show(resUser.messageEntity.RespDesc);
@@ -77,5 +78,7 @@ namespace HNAMDotNet.HospitalManagementSystem
                 SendKeys.Send("{Tab}");
             }
         }
+
+       
     }
 }

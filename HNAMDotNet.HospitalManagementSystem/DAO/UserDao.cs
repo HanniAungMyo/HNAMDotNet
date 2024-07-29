@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace HNAMDotNet.HospitalManagementSystem.DAO
 {
@@ -17,20 +18,19 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
         SqlCommand scom;
         SqlDataAdapter adapter;
 
-        public ResUser Login(User user)
+        public ResUser Login(UserEntity user)
         {
-
             MessageEntity _messageEntity = new MessageEntity();
             try
             {
-                User User = new User();
+                UserEntity User = new UserEntity();
                 sqlConnection = DbConnector.Connect();
                 if (sqlConnection == null) return null;
 
                 scom = new SqlCommand(ProcedureConstants.SP_LoginByUserNameAndPassword, sqlConnection);
                 scom.CommandType = CommandType.StoredProcedure;
-                scom.Parameters.AddWithValue("@UserName", user.UserName);
-                scom.Parameters.AddWithValue("@Password", user.Password);
+                scom.Parameters.AddWithValue("@LoginName", user.LoginName);
+                scom.Parameters.AddWithValue("@Password", Cryptography.Encrypt(user.Password));
                 adapter = new SqlDataAdapter(scom);
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
@@ -51,13 +51,11 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                     _messageEntity.RespDesc = "Invalid UserName And Password";
                     _messageEntity.RespType = CommonResponseMessage.ResWarningType;
                 }
-
                 return new ResUser()
                 {
                     messageEntity = _messageEntity,
                     User = User
                 };
-
             }
             catch (Exception ex)
             {

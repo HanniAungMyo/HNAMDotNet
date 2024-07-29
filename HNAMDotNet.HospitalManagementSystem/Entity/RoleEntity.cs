@@ -7,16 +7,14 @@ using System.Threading.Tasks;
 
 namespace HNAMDotNet.HospitalManagementSystem.Entity
 {
-    public class User
+    public class RoleEntity
     {
         public int Id { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
+        public string RoleName { get; set; }
     }
-
-    public class ResUser
+    public class ResRoleEntity
     {
-        public MessageEntity messageEntity { get; set; }    
-        public User User {  get; set; }
+        public MessageEntity Message { get; set; }
+        public List<RoleEntity> Rows { get; set; }
     }
 }

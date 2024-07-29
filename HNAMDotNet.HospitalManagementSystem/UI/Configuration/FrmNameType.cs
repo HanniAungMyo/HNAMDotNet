@@ -144,6 +144,17 @@ namespace HNAMDotNet.HospitalManagementSystem.UI.Configuration
             }
         }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            ClearAllData();
+        }
+
+        private void ClearAllData()
+        {
+            txtNameType.Clear();
+            _Id = 0;
+            btnSave.Text = "Save";
+        }
         //private void dgvNameType_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         //{
 

@@ -71,6 +71,7 @@ namespace HNAMDotNet.HospitalManagementSystem.UI.Configuration
                 MessageBox.Show(ex.Message);
             }
         }
+
         private void FrmSpeciality_Load(object sender, EventArgs e)
         {
             BindDataGridView();
@@ -109,6 +110,7 @@ namespace HNAMDotNet.HospitalManagementSystem.UI.Configuration
                 MessageBox.Show(ex.Message);
             }
         }
+
         private void dgvSpeciality_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -147,7 +149,12 @@ namespace HNAMDotNet.HospitalManagementSystem.UI.Configuration
 
         }
 
-
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            txtSpeciality.Clear();
+            _Id = 0;
+            btnSave.Text = "Save";
+        }
     }
 }
 

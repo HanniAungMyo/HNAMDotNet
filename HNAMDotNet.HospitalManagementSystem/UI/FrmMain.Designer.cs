@@ -188,6 +188,7 @@
             btnBooking.Size = new Size(153, 56);
             btnBooking.TabIndex = 2;
             btnBooking.Text = "Booking";
+            btnBooking.Click += btnBooking_Click;
             // 
             // btnUser
             // 

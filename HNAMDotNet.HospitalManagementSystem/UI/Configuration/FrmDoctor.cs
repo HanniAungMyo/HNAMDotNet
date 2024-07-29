@@ -50,8 +50,8 @@ namespace HNAMDotNet.HospitalManagementSystem.UI.Configuration
 
         private void FrmDoctor_Load(object sender, EventArgs e)
         {
-            dgvDoctor.AutoGenerateColumns = false;
             GetComboData();
+            dgvDoctor.AutoGenerateColumns = false;
             BindDataGridView();
         }
 
@@ -213,6 +213,20 @@ namespace HNAMDotNet.HospitalManagementSystem.UI.Configuration
         private void txtDoctorFee_KeyPress(object sender, KeyPressEventArgs e)
         {
             CommonFormat.txtNumberOnly(txtDoctorFee, e);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+             ClearAllData();
+        }
+
+        private void ClearAllData()
+        {
+            txtName.Clear();
+            cboSpeciality.SelectedIndex=0;
+            txtDoctorFee.Clear();
+            _Id = 0;
+            btnSave.Text = "Save";
         }
     }
 }

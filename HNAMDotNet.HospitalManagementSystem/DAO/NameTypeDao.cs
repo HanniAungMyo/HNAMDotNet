@@ -26,6 +26,7 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                 cmd = new SqlCommand(ProcedureConstants.SP_SaveNameType, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Type", nameType.Type);
+                cmd.Parameters.AddWithValue("@UserId", CommonFormat.LoginId);
                 //adapter = new SqlDataAdapter(cmd);
                 cmd.ExecuteNonQuery();
                 message.RespCode = CommonResponseMessage.ResSuccessCode;
@@ -93,6 +94,8 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Id", nameType.Id);
                 cmd.Parameters.AddWithValue("@Type", nameType.Type);
+                cmd.Parameters.AddWithValue("@UserId", CommonFormat.LoginId);
+
                 //adapter = new SqlDataAdapter(cmd);
                 cmd.ExecuteNonQuery();
                 message.RespCode = CommonResponseMessage.ResSuccessCode;

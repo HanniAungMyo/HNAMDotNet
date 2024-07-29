@@ -142,10 +142,17 @@ namespace HNAMDotNet.HospitalManagementSystem.UI.Configuration
                 _Id = Convert.ToInt32(dgvRow.Cells["colId"].Value.ToString());
                 btnSave.Text = "Update";
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            txtMaritalStatus.Clear();
+            _Id = 0;
+            btnSave.Text = "Save";
         }
     }
 }

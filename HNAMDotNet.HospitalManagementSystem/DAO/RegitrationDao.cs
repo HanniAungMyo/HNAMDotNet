@@ -96,6 +96,8 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                 cmd.Parameters.AddWithValue("@Gender", reg.Gender);
                 cmd.Parameters.AddWithValue("@MaritalStatusId", reg.MaritalStatusId);
                 cmd.Parameters.AddWithValue("@NameTypeId", reg.NameTypeId);
+                cmd.Parameters.AddWithValue("@UserId", CommonFormat.LoginId);
+
                 dataAdapter = new SqlDataAdapter(cmd);
                 cmd.ExecuteNonQuery();
                 _messageEntity.RespCode = CommonResponseMessage.ResSuccessCode;
@@ -116,13 +118,13 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
         {
             try
             {
-                DataTable dt = new DataTable();
 
                 con = DbConnector.Connect();
                 if (con == null) return null;
                 cmd = new SqlCommand(ProcedureConstants.SP_GetAllRegistrationData, con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 dataAdapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
                 dataAdapter.Fill(dt);
 
                 List<RegistrationEntity> lst = new List<RegistrationEntity>();
@@ -180,6 +182,7 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                 cmd.Parameters.AddWithValue("@Gender", reg.Gender);
                 cmd.Parameters.AddWithValue("@MaritalStatusId", reg.MaritalStatusId);
                 cmd.Parameters.AddWithValue("@NameTypeId", reg.NameTypeId);
+                cmd.Parameters.AddWithValue("@UserId", CommonFormat.LoginId);
                 dataAdapter = new SqlDataAdapter(cmd);
                 cmd.ExecuteNonQuery();
                 _messageEntity.RespCode = CommonResponseMessage.ResSuccessCode;

@@ -76,6 +76,7 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                 cmd.Parameters.AddWithValue("@Name", dct.Name);
                 cmd.Parameters.AddWithValue("@SpecialityId", dct.SpecialityId);
                 cmd.Parameters.AddWithValue("@DoctorFees", dct.DoctorFees);
+                cmd.Parameters.AddWithValue("@UserId", CommonFormat.LoginId);
                 adapter = new SqlDataAdapter(cmd);
                 cmd.ExecuteNonQuery();
 
@@ -169,10 +170,11 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                 if (conn == null) return null;
                 cmd = new SqlCommand(ProcedureConstants.SP_UpdateDoctor, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Id",dct.Id);
+                cmd.Parameters.AddWithValue("@Id", dct.Id);
                 cmd.Parameters.AddWithValue("@Name", dct.Name);
                 cmd.Parameters.AddWithValue("@SpecialityId", dct.SpecialityId);
                 cmd.Parameters.AddWithValue("@DoctorFees", dct.DoctorFees);
+                cmd.Parameters.AddWithValue("@UserId", CommonFormat.LoginId);
                 adapter = new SqlDataAdapter(cmd);
                 cmd.ExecuteNonQuery();
                 message.RespCode = CommonResponseMessage.ResSuccessCode;

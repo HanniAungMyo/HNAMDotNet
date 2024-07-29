@@ -39,7 +39,13 @@ namespace HNAMDotNet.HospitalManagementSystem.UI
 
         private void btnSpeciality_Click(object sender, EventArgs e)
         {
-            FrmSpeciality frm=new FrmSpeciality();
+            FrmSpeciality frm = new FrmSpeciality();
+            frm.Show();
+        }
+
+        private void btnBooking_Click(object sender, EventArgs e)
+        {
+            FrmBooking frm = new FrmBooking();
             frm.Show();
         }
     }

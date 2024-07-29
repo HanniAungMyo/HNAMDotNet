@@ -31,5 +31,18 @@ namespace HNAMDotNet.HospitalManagementSystem.Common
         public static string SP_GetAllDoctorData = "SP_GetAllDoctorData";
         public static string SP_DeleteDoctor = "SP_DeleteDoctor";
         public static string SP_UpdateDoctor = "SP_UpdateDoctor";
+        public static string SP_SaveBooking = "SP_SaveBooking";
+        public static string SP_GetBookingComboData = "SP_GetBookingComboData";
+        public static string SP_GetAllBookingData = "SP_GetAllBookingData";
+        public static string SP_DeleteBookingData = "SP_DeleteBookingData";
+        public static string SP_UpdateBookingData = "SP_UpdateBookingData";
+        public static string SP_UpdateBookingStatusById = @"Update Tbl_Booking set Status=@Status,ModifiedBy=@UserId,ModifiedDate=GETDATE() where Id=@Id;";
+        public static string SP_GetUserComboData = "SP_GetUserComboData";
+        public static string SP_SaveUserForm = "SP_SaveUserForm";
+        public static string SP_UpdateUserForm = "SP_UpdateUserForm";
+        public static string SP_DeleteUserForm = "SP_DeleteUserForm";
+        public static string SP_FrmLoginComboData = "SP_FrmLoginComboData";
+        public static string SP_GetAllUserData = "SP_GetAllUserData";
     }
+
 }

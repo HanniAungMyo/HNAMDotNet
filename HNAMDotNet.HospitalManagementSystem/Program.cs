@@ -1,4 +1,6 @@
 using HNAMDotNet.HospitalManagementSystem.Common;
+using HNAMDotNet.HospitalManagementSystem.DAO;
+using HNAMDotNet.HospitalManagementSystem.UI;
 using HNAMDotNet.HospitalManagementSystem.UI.Configuration;
 using HNAMDotNet.HospitalManagementSystem.UI.Entry;
 
@@ -16,7 +18,7 @@ namespace HNAMDotNet.HospitalManagementSystem
             // see https://aka.ms/applicationconfiguration.
             DbConnector.ConnectionString = @"Data Source =LAPTOP\SQLSERVER;Initial Catalog =HMS;User ID =sa;Password =sa@123;TrustServerCertificate = true";
             ApplicationConfiguration.Initialize();
-            Application.Run(new FrmDoctor());
+            Application.Run(new FrmUser());
         }
     }
 }

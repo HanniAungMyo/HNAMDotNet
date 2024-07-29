@@ -26,6 +26,7 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                 cmd = new SqlCommand(ProcedureConstants.SP_SaveSpeciality, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Name", specialityEntity.Name);
+                cmd.Parameters.AddWithValue("@UserId", CommonFormat.LoginId);
                 //adapter = new SqlDataAdapter(cmd);
                 cmd.ExecuteNonQuery();
                 message.RespCode = CommonResponseMessage.ResSuccessCode;
@@ -118,6 +119,7 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Id", specialityEntity.Id);
                 cmd.Parameters.AddWithValue("@Name", specialityEntity.Name);
+                cmd.Parameters.AddWithValue("@UserId", CommonFormat.LoginId);
                 cmd.ExecuteNonQuery();
                 message.RespType= CommonResponseMessage.ResSuccessType;
                 message.RespDesc = "Update Successful";
