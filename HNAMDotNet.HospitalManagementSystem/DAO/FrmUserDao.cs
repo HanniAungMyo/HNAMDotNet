@@ -161,7 +161,7 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                 adapter = new SqlDataAdapter(cmd);
                 cmd.ExecuteNonQuery();
                 _messageEntity.RespCode = CommonResponseMessage.ResSuccessCode;
-                _messageEntity.RespDesc = "UserForm Delete Successfully";
+                _messageEntity.RespDesc = "Delete Successfully";
                 _messageEntity.RespType = CommonResponseMessage.ResSuccessType;
                 return _messageEntity;
             }
@@ -192,7 +192,7 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                 adapter = new SqlDataAdapter(cmd);
                 cmd.ExecuteNonQuery();
                 _messageEntity.RespCode = CommonResponseMessage.ResSuccessCode;
-                _messageEntity.RespDesc = "Formlogin Update Successfully";
+                _messageEntity.RespDesc = "Update Successfully";
                 _messageEntity.RespType = CommonResponseMessage.ResSuccessType;
                 return _messageEntity;
             }
@@ -204,8 +204,5 @@ namespace HNAMDotNet.HospitalManagementSystem.DAO
                 return _messageEntity;
             }
         }
-
-
-
     }
 }

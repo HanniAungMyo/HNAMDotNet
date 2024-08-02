@@ -135,7 +135,7 @@
             txtPassword.Location = new Point(157, 228);
             txtPassword.Margin = new Padding(3, 4, 3, 4);
             txtPassword.Name = "txtPassword";
-            txtPassword.PasswordChar = '*';
+            txtPassword.PasswordChar = '\0';
             txtPassword.PlaceholderText = "Password";
             txtPassword.SelectedText = "";
             txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -160,7 +160,6 @@
             cboRoleName.ShadowDecoration.CustomizableEdges = customizableEdges8;
             cboRoleName.Size = new Size(367, 56);
             cboRoleName.TabIndex = 3;
-            //cboRoleName.SelectedIndexChanged += cboRoleName_SelectedIndexChanged;
             // 
             // lblUserName
             // 

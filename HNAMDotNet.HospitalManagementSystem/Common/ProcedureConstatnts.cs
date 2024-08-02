@@ -43,6 +43,7 @@ namespace HNAMDotNet.HospitalManagementSystem.Common
         public static string SP_DeleteUserForm = "SP_DeleteUserForm";
         public static string SP_FrmLoginComboData = "SP_FrmLoginComboData";
         public static string SP_GetAllUserData = "SP_GetAllUserData";
+        public static string SP_GetAllMenuByRoleId = "SP_GetAllMenuByRoleId";
     }
 
 }

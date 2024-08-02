@@ -9,7 +9,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Folder Include="Images\" />
+	  <None Remove="Images\gender.png" />
 	</ItemGroup>
 
 	<ItemGroup>

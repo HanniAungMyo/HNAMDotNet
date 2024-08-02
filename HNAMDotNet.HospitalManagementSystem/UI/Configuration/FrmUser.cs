@@ -89,21 +89,15 @@ namespace HNAMDotNet.HospitalManagementSystem.UI
                             Id = _Id,
                             UserName = txtUser.Text,
                             LoginName = txtLogin.Text,
-                            Password =Cryptography.Decrypt (txtPassword.Text),
+                            Password =txtPassword.Text,
                             RoleId =Convert.ToInt32(cboRoleName.SelectedValue),
                         });
                     }
                     if (message.RespType == CommonResponseMessage.ResSuccessType)
                     {
                         MessageBox.Show(message.RespDesc);
-
-                       // FrmLogin frm = new FrmLogin();
-                       // frm.Show();
                         BindDataGridView();
-                        //this.Hide();
-                        ClearAll();
-                        btnSave.Text = "Save";
-                        _Id = 0;
+                        ClearAll(); 
                     }
                     else
                     {
@@ -152,6 +146,8 @@ namespace HNAMDotNet.HospitalManagementSystem.UI
             txtLogin.Clear();
             txtPassword.Clear();
             cboRoleName.SelectedIndex = 0;
+            _Id=0;
+            btnSave.Text = "Save";
         }
 
         private void dgvUser_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -161,7 +157,7 @@ namespace HNAMDotNet.HospitalManagementSystem.UI
                 DataGridViewRow dgvRow = dgvUser.SelectedRows[0];
                 txtUser.Text = dgvRow.Cells["colUserName"].Value.ToString();
                 txtLogin.Text = dgvRow.Cells["colLoginName"].Value.ToString();
-                txtPassword.Text = Cryptography.Encrypt(dgvRow.Cells["colPassword"].ToString());
+                txtPassword.Text = dgvRow.Cells["colPassword"].Value.ToString();
                 cboRoleName.SelectedValue = Convert.ToInt32(dgvRow.Cells["colRoleId"].Value);
                 _Id = Convert.ToInt32(dgvRow.Cells["colId"].Value);
                 btnSave.Text = "Update";
@@ -210,16 +206,7 @@ namespace HNAMDotNet.HospitalManagementSystem.UI
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            ClearAllData();
-        }
-        private void ClearAllData()
-        {
-            txtUser.Clear();
-            txtLogin.Clear();
-            txtPassword.Clear();
-            cboRoleName.SelectedIndex = 0;
-            _Id = 0;
-            btnSave.Text = "Save";
+            ClearAll();
         }
 
         private void txtUser_KeyDown(object sender, KeyEventArgs e)

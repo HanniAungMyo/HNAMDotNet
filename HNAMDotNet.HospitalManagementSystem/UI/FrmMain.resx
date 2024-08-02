@@ -117,4 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnLoginOut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOLSURBVFhH7ddp
+        qE9pHMDxa700TLZmCmmia3cjXljGNpQXw83YJlLeIF4gjZrJUkjZ8mIaRcxY5yamaRh7FGXKliJLFGpu
+        IwzuWMdYZq7v9+93+P/df9Pd3Lzwq497nnPOc57fOec5v+cv552IkpKSWuiKURj9ljmGY9VMBv8YR2EU
+        VxPDMT8ygS04gebop1RmBNt5KEButBthOJqnTqhg2B8nUWjDjL7AVDzD09huh8f4G7+iBs5F+xYax/W8
+        RhdMLqO+0WcEit0wBmA9Dge3fV8PsAI30RD/YQGM7qnRCbbdd6WMNkcfxyxJT6AbPOEynCQf4CB8QpOi
+        0yLcw494OYkqGPTPSGA+3pytZeWcqB8X7RF/G2Mksp2fcMxXCdxH+iwtD+dDb3yIs8jFGNxBtvMTjvn6
+        FZh5dYZjOvD7BJIEBmI2lmAW/OT87sfCyZIXnfKxEAXRngCLinXgSzghO2AKWsQ5/eEcqYdp+AZNkJGA
+        HY19KMJPmI5HOAMnmoM/xCk8gQP+gWW4jW/xG7wR2wfgTfjJrsFGWE/81I8jawK94B1aC3bCizqrrY5r
+        YSJe1PL9A0zAKIQLmgnMgQkYE5EkcA0+sbb4C4NRKoEkVmMvFsdjtCR7oaJof49NMIGLqB370xM4gruw
+        sprAn/D7/wpWV197qQQ8YSW86G54onfmI7c8X4+BHHwDkiewNEsCXitZZU3gBsZhqTuIYf7zZgLe2Wns
+        xzx4oT3w3feFr+IXWERcWExgHVygHDg9ASthR/wDE7DfJRyDN5gxBz6D73gbvoMzuy6+hnfaJ+5wCJxM
+        zuaamAuXbPvPhKtoT7g4fRJ9fO/eYFMsxyq0RuXrAP3aoGM0yxWO6cCVTcAv4Tm8q2axO2twvDOShUgZ
+        i1FFE3Bi+svmPFxgZqBOHH4V7Psc/8Y5ckk3rlZFAqoNJ6WfmhNtaJySCtp+Wdtj27pijXEC51VJAtG0
+        3RJ+CcYuNIr9viKLlxN7B66jQ9LJqKoENnsxwpJ7CK1ivwn8jMzBDRpGZRLYCgcbj0FwUubHKamgbQLO
+        gZePPT3YYZktT/jDdFT0NQEHtFJ6Zw3g+z0Qx13Ukig9uMHOTnBhKCuLTvIb0ASsgn3wO6yC7WHFdOa3
+        QtLvfz/TCgUXdUEZEttWwE9j22p6AalFqtqCAS3R/h5oBpfckXGoeoIB/X9my9h23W+QOvDuRk7OC2Sp
+        T1gFueYmAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="sideBarTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

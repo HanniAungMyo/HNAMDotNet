@@ -11,6 +11,9 @@ namespace HNAMDotNet.HospitalManagementSystem.Common
     public class CommonFormat
     {
         public static int LoginId = 0;
+
+        public static int RoleId = 0;
+
         public static void txtNumberOnly(Guna2TextBox txt, KeyPressEventArgs e)
         {
             if (txt.TextLength == 0 && e.KeyChar == '0')

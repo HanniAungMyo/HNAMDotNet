@@ -28,213 +28,133 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             pnlData = new Guna.UI2.WinForms.Guna2Panel();
-            pnlLeft = new Guna.UI2.WinForms.Guna2Panel();
-            btnSpeciality = new Guna.UI2.WinForms.Guna2Button();
-            btnNameType = new Guna.UI2.WinForms.Guna2Button();
-            btnMarital = new Guna.UI2.WinForms.Guna2Button();
-            btnDoctor = new Guna.UI2.WinForms.Guna2Button();
-            btnBooking = new Guna.UI2.WinForms.Guna2Button();
-            btnUser = new Guna.UI2.WinForms.Guna2Button();
-            btnRegistration = new Guna.UI2.WinForms.Guna2Button();
+            sideBar = new Panel();
+            btnLoginOut = new Button();
+            btnNameType = new Button();
+            btnMenuIcon = new Button();
+            sideBarTimer = new System.Windows.Forms.Timer(components);
             guna2Panel1.SuspendLayout();
-            pnlLeft.SuspendLayout();
+            pnlData.SuspendLayout();
+            sideBar.SuspendLayout();
             SuspendLayout();
             // 
             // guna2Panel1
             // 
             guna2Panel1.Controls.Add(pnlData);
-            guna2Panel1.Controls.Add(pnlLeft);
-            guna2Panel1.CustomizableEdges = customizableEdges19;
+            guna2Panel1.CustomizableEdges = customizableEdges7;
             guna2Panel1.Dock = DockStyle.Fill;
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2Panel1.Size = new Size(800, 607);
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Panel1.Size = new Size(914, 816);
             guna2Panel1.TabIndex = 0;
             // 
             // pnlData
             // 
-            pnlData.CustomizableEdges = customizableEdges1;
+            pnlData.Controls.Add(sideBar);
+            pnlData.CustomizableEdges = customizableEdges5;
             pnlData.Dock = DockStyle.Fill;
-            pnlData.Location = new Point(206, 0);
+            pnlData.Location = new Point(0, 0);
             pnlData.Name = "pnlData";
-            pnlData.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            pnlData.Size = new Size(594, 607);
+            pnlData.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            pnlData.Size = new Size(914, 816);
             pnlData.TabIndex = 1;
             // 
-            // pnlLeft
+            // sideBar
             // 
-            pnlLeft.Controls.Add(btnSpeciality);
-            pnlLeft.Controls.Add(btnNameType);
-            pnlLeft.Controls.Add(btnMarital);
-            pnlLeft.Controls.Add(btnDoctor);
-            pnlLeft.Controls.Add(btnBooking);
-            pnlLeft.Controls.Add(btnUser);
-            pnlLeft.Controls.Add(btnRegistration);
-            pnlLeft.CustomizableEdges = customizableEdges17;
-            pnlLeft.Dock = DockStyle.Left;
-            pnlLeft.Location = new Point(0, 0);
-            pnlLeft.Name = "pnlLeft";
-            pnlLeft.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            pnlLeft.Size = new Size(206, 607);
-            pnlLeft.TabIndex = 0;
+            sideBar.BackColor = Color.FromArgb(3, 83, 164);
+            sideBar.Controls.Add(btnLoginOut);
+            sideBar.Controls.Add(btnNameType);
+            sideBar.Controls.Add(btnMenuIcon);
+            sideBar.Dock = DockStyle.Left;
+            sideBar.Location = new Point(0, 0);
+            sideBar.Name = "sideBar";
+            sideBar.Size = new Size(331, 816);
+            sideBar.TabIndex = 0;
             // 
-            // btnSpeciality
+            // btnLoginOut
             // 
-            btnSpeciality.CustomizableEdges = customizableEdges3;
-            btnSpeciality.DisabledState.BorderColor = Color.DarkGray;
-            btnSpeciality.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSpeciality.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSpeciality.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSpeciality.FillColor = Color.FromArgb(22, 123, 71);
-            btnSpeciality.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnSpeciality.ForeColor = Color.White;
-            btnSpeciality.Location = new Point(23, 536);
-            btnSpeciality.Name = "btnSpeciality";
-            btnSpeciality.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSpeciality.Size = new Size(153, 56);
-            btnSpeciality.TabIndex = 6;
-            btnSpeciality.Text = "Speciality";
-            btnSpeciality.Click += btnSpeciality_Click;
+            btnLoginOut.BackColor = Color.FromArgb(4, 102, 200);
+            btnLoginOut.Dock = DockStyle.Bottom;
+            btnLoginOut.FlatStyle = FlatStyle.Flat;
+            btnLoginOut.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLoginOut.ForeColor = Color.White;
+            btnLoginOut.Image = (Image)resources.GetObject("btnLoginOut.Image");
+            btnLoginOut.ImageAlign = ContentAlignment.MiddleLeft;
+            btnLoginOut.Location = new Point(0, 743);
+            btnLoginOut.Name = "btnLoginOut";
+            btnLoginOut.Padding = new Padding(30, 0, 0, 0);
+            btnLoginOut.Size = new Size(331, 73);
+            btnLoginOut.TabIndex = 15;
+            btnLoginOut.Text = "         Login";
+            btnLoginOut.TextAlign = ContentAlignment.MiddleLeft;
+            btnLoginOut.UseVisualStyleBackColor = false;
             // 
             // btnNameType
             // 
-            btnNameType.CustomizableEdges = customizableEdges5;
-            btnNameType.DisabledState.BorderColor = Color.DarkGray;
-            btnNameType.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnNameType.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnNameType.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnNameType.FillColor = Color.FromArgb(22, 123, 71);
-            btnNameType.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnNameType.BackColor = Color.FromArgb(4, 102, 200);
+            btnNameType.Dock = DockStyle.Top;
+            btnNameType.FlatStyle = FlatStyle.Flat;
+            btnNameType.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnNameType.ForeColor = Color.White;
-            btnNameType.Location = new Point(23, 438);
+            btnNameType.Image = Properties.Resources.name_type3;
+            btnNameType.ImageAlign = ContentAlignment.MiddleLeft;
+            btnNameType.Location = new Point(0, 91);
+            btnNameType.Margin = new Padding(5);
             btnNameType.Name = "btnNameType";
-            btnNameType.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnNameType.Size = new Size(153, 56);
-            btnNameType.TabIndex = 5;
-            btnNameType.Text = "NameType";
-            btnNameType.Click += btnNameType_Click;
+            btnNameType.Padding = new Padding(30, 0, 0, 0);
+            btnNameType.Size = new Size(331, 69);
+            btnNameType.TabIndex = 8;
+            btnNameType.Text = "           Name Type";
+            btnNameType.TextAlign = ContentAlignment.MiddleLeft;
+            btnNameType.UseVisualStyleBackColor = false;
             // 
-            // btnMarital
+            // btnMenuIcon
             // 
-            btnMarital.CustomizableEdges = customizableEdges7;
-            btnMarital.DisabledState.BorderColor = Color.DarkGray;
-            btnMarital.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnMarital.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnMarital.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnMarital.FillColor = Color.FromArgb(22, 123, 71);
-            btnMarital.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnMarital.ForeColor = Color.White;
-            btnMarital.Location = new Point(23, 352);
-            btnMarital.Name = "btnMarital";
-            btnMarital.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnMarital.Size = new Size(153, 56);
-            btnMarital.TabIndex = 4;
-            btnMarital.Text = "MaritalStatus";
-            btnMarital.Click += btnMarital_Click;
+            btnMenuIcon.BackColor = Color.FromArgb(3, 83, 164);
+            btnMenuIcon.Dock = DockStyle.Top;
+            btnMenuIcon.FlatStyle = FlatStyle.Flat;
+            btnMenuIcon.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMenuIcon.ForeColor = Color.White;
+            btnMenuIcon.Image = Properties.Resources.menu3;
+            btnMenuIcon.ImageAlign = ContentAlignment.MiddleLeft;
+            btnMenuIcon.Location = new Point(0, 0);
+            btnMenuIcon.Margin = new Padding(5);
+            btnMenuIcon.Name = "btnMenuIcon";
+            btnMenuIcon.Padding = new Padding(30, 0, 0, 0);
+            btnMenuIcon.Size = new Size(331, 91);
+            btnMenuIcon.TabIndex = 2;
+            btnMenuIcon.Text = "           HMS";
+            btnMenuIcon.TextAlign = ContentAlignment.MiddleLeft;
+            btnMenuIcon.UseVisualStyleBackColor = false;
+            btnMenuIcon.Click += btnMenuIcon_Click;
             // 
-            // btnDoctor
+            // sideBarTimer
             // 
-            btnDoctor.CustomizableEdges = customizableEdges9;
-            btnDoctor.DisabledState.BorderColor = Color.DarkGray;
-            btnDoctor.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnDoctor.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnDoctor.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnDoctor.FillColor = Color.FromArgb(22, 123, 71);
-            btnDoctor.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnDoctor.ForeColor = Color.White;
-            btnDoctor.Location = new Point(23, 265);
-            btnDoctor.Name = "btnDoctor";
-            btnDoctor.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnDoctor.Size = new Size(153, 56);
-            btnDoctor.TabIndex = 3;
-            btnDoctor.Text = "Doctors";
-            // 
-            // btnBooking
-            // 
-            btnBooking.CustomizableEdges = customizableEdges11;
-            btnBooking.DisabledState.BorderColor = Color.DarkGray;
-            btnBooking.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnBooking.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnBooking.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnBooking.FillColor = Color.FromArgb(22, 123, 71);
-            btnBooking.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnBooking.ForeColor = Color.White;
-            btnBooking.Location = new Point(23, 189);
-            btnBooking.Name = "btnBooking";
-            btnBooking.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnBooking.Size = new Size(153, 56);
-            btnBooking.TabIndex = 2;
-            btnBooking.Text = "Booking";
-            btnBooking.Click += btnBooking_Click;
-            // 
-            // btnUser
-            // 
-            btnUser.CustomizableEdges = customizableEdges13;
-            btnUser.DisabledState.BorderColor = Color.DarkGray;
-            btnUser.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnUser.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnUser.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnUser.FillColor = Color.FromArgb(22, 123, 71);
-            btnUser.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnUser.ForeColor = Color.White;
-            btnUser.Location = new Point(23, 107);
-            btnUser.Name = "btnUser";
-            btnUser.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnUser.Size = new Size(153, 56);
-            btnUser.TabIndex = 1;
-            btnUser.Text = "User";
-            // 
-            // btnRegistration
-            // 
-            btnRegistration.CustomizableEdges = customizableEdges15;
-            btnRegistration.DisabledState.BorderColor = Color.DarkGray;
-            btnRegistration.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnRegistration.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnRegistration.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnRegistration.FillColor = Color.FromArgb(22, 123, 71);
-            btnRegistration.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnRegistration.ForeColor = Color.White;
-            btnRegistration.Location = new Point(23, 34);
-            btnRegistration.Name = "btnRegistration";
-            btnRegistration.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnRegistration.Size = new Size(153, 56);
-            btnRegistration.TabIndex = 0;
-            btnRegistration.Text = "Registration";
-            btnRegistration.Click += btnRegistration_Click;
+            sideBarTimer.Interval = 10;
+            sideBarTimer.Tick += sideBarTimer_Tick;
             // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 607);
+            ClientSize = new Size(914, 816);
             Controls.Add(guna2Panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FrmMain";
             Text = "FrmMain";
+            Load += FrmMain_Load;
             guna2Panel1.ResumeLayout(false);
-            pnlLeft.ResumeLayout(false);
+            pnlData.ResumeLayout(false);
+            sideBar.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -242,13 +162,10 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel pnlData;
-        private Guna.UI2.WinForms.Guna2Panel pnlLeft;
-        private Guna.UI2.WinForms.Guna2Button btnRegistration;
-        private Guna.UI2.WinForms.Guna2Button btnUser;
-        private Guna.UI2.WinForms.Guna2Button btnMarital;
-        private Guna.UI2.WinForms.Guna2Button btnDoctor;
-        private Guna.UI2.WinForms.Guna2Button btnBooking;
-        private Guna.UI2.WinForms.Guna2Button btnNameType;
-        private Guna.UI2.WinForms.Guna2Button btnSpeciality;
+        private System.Windows.Forms.Timer sideBarTimer;
+        private Panel sideBar;
+        private Button btnNameType;
+        private Button btnMenuIcon;
+        private Button btnLoginOut;
     }
 }
